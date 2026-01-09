@@ -1,18 +1,22 @@
-const newsData = {
-  "headlines": [
-    "haha yay news",
-  ]
-};
+async function loadNews() {
+    try {
+        const response = await fetch('./news.json');
+        
+        if (!response.ok) {
+            console.error("File not found! Error code:", response.status);
+            return;
+        }
 
-function loadNews() {
-    const ticker = document.getElementById('ticker-text');
-    if (newsData.headlines && newsData.headlines.length > 0) {
-        ticker.innerText = newsData.headlines.join("  •  ");
+        const data = await response.json();
+        const ticker = document.getElementById('ticker-text');
+        
+        if (data.headlines && data.headlines.length > 0) {
+            ticker.innerText = data.headlines.join("  |  ");
+        }
+    } catch (error) {
+        console.error("DETAILED ERROR:", error);
+        document.getElementById('ticker-text').innerText = "News currently unavailable.";
     }
 }
-
-document.querySelector('.play-button').addEventListener('click', () => {
-    console.log("Loading Duck Dash...");
-});
 
 loadNews();
