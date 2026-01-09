@@ -268,9 +268,19 @@ footer p {
     transform: scale(1.1);
 }
 
+.coin-icon {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
 .user-info {
+    display: flex;
+    align-items: center;
     color: white;
     font-family: 'BurbankSmallMedium', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
+
 
