@@ -9,34 +9,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="game-body">
+<div class="game-wrapper">
+    <div id="game-world">
+        <a href="index.html" class="home-btn">
+            <img src="icon-home.png" alt="Home">
+        </a>
 
-    <div class="game-wrapper">
-        <div id="game-world">
-            <div id="player-duck">
-                <img src="1.gif" alt="Duck" id="duck-sprite">
-            </div>
-        </div>
-
-        <div class="cp-taskbar">
-            <div class="taskbar-left">
-                <div class="user-info">
-                    <img src="ci1.png" alt="Coins" class="coin-icon">
-                    <span id="coin-count">500</span>
-                </div>
-            </div>
-
-            <div class="taskbar-center">
-                <input type="text" id="chat-input" placeholder="Say something...">
-            </div>
-
-            <div class="taskbar-right">
-                <button class="cp-button">Map</button>
-                <button class="cp-button">Inventory</button>
-                <a href="#" class="cp-button exit">Exit</a>
-            </div>
+        <div id="player-duck">
+            <img src="1.gif" alt="Duck" id="duck-sprite">
         </div>
     </div>
 
+    <div class="cp-taskbar-container">
+        <div class="taskbar-item map-area">
+            <button class="map-button">MAP</button>
+        </div>
+
+        <div class="chat-wrapper">
+            <input type="text" id="chat-input" placeholder="Say something...">
+            <button id="chat-send-btn">
+                <img src="chat-icon.png" alt="Send"> </button>
+        </div>
+
+        <div class="taskbar-item inventory-area">
+            <div class="user-info">
+                <img src="ci1.png" alt="Coins" class="coin-icon">
+                <span id="coin-count">500</span>
+            </div>
+        </div>
+    </div>
+</div>
+    
     <script src="script.js"></script>
 </body>
 </html>
