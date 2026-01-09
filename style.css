@@ -1,241 +1,225 @@
-@font-face { font-family: 'BurbankBigBlack'; src: url('BurbankBigBlack.ttf') format('truetype'); font-weight: 900; }
-@font-face { font-family: 'BurbankBigBold'; src: url('BurbankBigBold.ttf') format('truetype'); font-weight: 900; }
-@font-face { font-family: 'BurbankSmallMedium'; src: url('BurbankSmallMedium.ttf') format('opentype'); font-weight: 900; }
-@font-face { font-family: 'CComicrazyItalic'; src: url('CComicrazyItalic.ttf') format('truetype'); font-weight: 900; }
-@font-face { font-family: 'Bumbastika'; src: url('BumbastikaImproved.otf') format('opentype'); font-weight: 900; }
 
+@font-face {
+font-family: 'BurbankBigBlack';
+src: url('BurbankBigBlack.ttf') format('truetype');
+font-weight: 900;
+}
+@font-face {
+font-family: 'BurbankBigBold';
+src: url('BurbankBigBold.ttf') format('truetype');
+font-weight: 900;
+}
+@font-face {
+font-family: 'BurbankSmallMedium';
+src: url('BurbankSmallMedium.ttf') format('truetype');
+font-weight: 900;
+}
+@font-face {
+font-family: 'CComicrazyItalic';
+src: url('CComicrazyItalic.ttf') format('truetype');
+font-weight: 900;
+}
+@font-face {
+font-family: 'Bumbastika';
+src: url('BumbastikaImproved.otf') format('opentype');
+font-weight: 900;
+}
 body {
-    background-image: 
-        linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
-        linear-gradient(180deg, #0a61a8, #025599, #0a61a8);
-    background-attachment: fixed;
-    color: white; 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-    text-align: center;
-    overflow-x: hidden;
+background-image:
+linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
+linear-gradient(180deg, #0a61a8, #025599, #0a61a8);
+background-attachment: fixed;
+color: white;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+box-sizing: border-box;
+text-align: center;
+overflow-x: hidden;
 }
-
 .hero {
-    width: 100%;
-    padding: 40px 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.1);
+width: 100%;
+padding: 40px 2%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+background: rgba(0, 0, 0, 0.1);
 }
-
 .hero-left { text-align: left; }
 .hero-right { text-align: right; }
-
 h1 {
-    font-family: 'Bumbastika', Impact, sans-serif;
-    margin: 0;
-    font-size: 2.2rem;
-    line-height: 1;
+font-family: 'Bumbastika', Impact, sans-serif;
+margin: 0;
+font-size: 2.2rem;
+line-height: 1;
 }
-
 .duck, .duck2 {
-    color: #FFD700; 
-    text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 5px 0px #000;
+color: #FFD700;
+text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 5px 0px #000;
 }
-
 .point, .point2 {
-    color: #00FBFF; 
-    text-shadow: 0 0 5px #fff, 0 0 10px #00FBFF, 0 0 20px #00FBFF;
-    animation: sparkle 1.5s infinite alternate;
+color: #00FBFF;
+text-shadow: 0 0 5px #fff, 0 0 10px #00FBFF, 0 0 20px #00FBFF;
+animation: sparkle 1.5s infinite alternate;
 }
-
 @keyframes sparkle {
-    0% { text-shadow: 0 0 5px #fff, 0 0 10px #00FBFF; filter: brightness(1); }
-    100% { text-shadow: 0 0 10px #fff, 0 0 20px #00FBFF, 0 0 30px #00FBFF; filter: brightness(1.3); }
+0% { text-shadow: 0 0 5px #fff, 0 0 10px #00FBFF; filter: brightness(1); }
+100% { text-shadow: 0 0 10px #fff, 0 0 20px #00FBFF, 0 0 30px #00FBFF; filter: brightness(1.3); }
 }
-
 h2 { font-family: 'BurbankBigBlack', Impact, sans-serif; margin: 10px 0 0 0; }
 h3 { font-family: 'Bumbastika', Impact, sans-serif; margin: 0; }
 p { font-family: "BurbankBigBold", Impact, sans-serif; font-size: 1.2rem; margin: 10px 0 20px 0; }
-
 .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
 }
-
-img.hero-gif {
-    max-width: 250px;
-    height: auto;
-}
-
 .play-button {
-    display: inline-block;
-    width: 220px; 
-    position: relative;
-    z-index: 5;
-    background-color: #025599; 
-    border: 2px solid #004bb5; 
-    border-radius: 17px;
-    
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    color: white;
-    font-family: 'CComicrazyItalic', Impact, sans-serif;
-    font-size: 22px;
-    font-weight: 900; 
-    -webkit-text-stroke: 6px black;
-    paint-order: stroke fill; 
-    padding: 15px 2px;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 0 #004bb5;
-    overflow: hidden; 
+width: 220px;
+position: relative;
+z-index: 5;
+background-color: #025599;
+border: 2px solid #004bb5;
+border-radius: 17px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+font-family: 'CComicrazyItalic', Impact, sans-serif;
+font-size: 22px;
+font-weight: 900;
+-webkit-text-stroke: 3px black;
+paint-order: stroke fill;
+padding: 15px 2px;
+cursor: pointer;
+text-decoration: none;
+box-shadow: 0 4px 0 #004bb5;
+transition: transform 0.2s;
 }
-
-.play-button::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: linear-gradient(180deg, #539FD8, #1356A2, #2F88CC);
-    z-index: -1; 
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1; 
-}
-
-.play-button:hover::after { opacity: 0; }
-
+.play-button:hover { transform: scale(1.05); }
 .ticker-container {
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    padding: 10px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border-bottom: 2px solid #FFD700;
+background: rgba(0, 0, 0, 0.5);
+width: 100%;
+padding: 10px 0;
+overflow: hidden;
+white-space: nowrap;
+border-bottom: 2px solid #FFD700;
 }
-
 .ticker-content {
-    display: inline-block;
-    font-family: 'BurbankSmallMedium', sans-serif;
-    font-size: 1.1rem;
+display: inline-block;
+font-family: 'BurbankSmallMedium', sans-serif;
+font-size: 1.1rem;
 }
-
-@keyframes ticker {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-
-footer { padding: 20px; }
-footer p {
-    font-family: "BurbankSmallMedium", "Comic Sans MS", cursive, sans-serif;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
 .game-body {
-    background-color: #003366;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+background-color: #003366;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-
-.game-container {
-    width: 800px;
-    height: 600px;
-    background: #add8e6;
-    border: 5px solid #000;
-    position: relative;
-    overflow: hidden;
+.game-wrapper {
+position: relative;
+width: 800px;
+height: 600px;
+background: #add8e6;
+border: 8px solid #001a4d;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 0 50px rgba(0,0,0,0.5);
 }
-
+#game-world {
+width: 100%;
+height: 100%;
+background: radial-gradient(circle, #add8e6 0%, #4682b4 100%);
+position: relative;
+}
 #player-duck {
-    position: absolute;
-    transform: translate(-50%, -100%); 
-    z-index: 10;
-    pointer-events: none;
+position: absolute;
+transform: translate(-50%, -100%);
+z-index: 10;
+pointer-events: none;
 }
-
 #duck-sprite {
-    width: 60px;
+width: 80px;
 }
 .dd-taskbar-container {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    height: 55px;
-    background: linear-gradient(to bottom, #0059dd, #003399);
-    border: 3px solid #001a4d;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 100;
+position: absolute;
+bottom: 15px;
+left: 50%;
+transform: translateX(-50%);
+width: 90%;
+height: 60px;
+background: linear-gradient(to bottom, #0059dd, #003399);
+border: 3px solid #001a4d;
+border-radius: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 25px;
+z-index: 100;
 }
-
 .dd-chat-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+position: relative;
+display: flex;
+align-items: center;
 }
-
 #chat-input {
-    width: 320px;
-    height: 32px;
-    border-radius: 20px;
-    border: 2px solid #001a4d;
-    padding: 0 50px 0 15px;
-    font-family: Arial, sans-serif;
-    outline: none;
+width: 350px;
+height: 35px;
+border-radius: 20px;
+border: 2px solid #001a4d;
+padding: 0 55px 0 15px;
+font-family: Arial, sans-serif;
+outline: none;
 }
-
 #chat-send-btn {
-    position: absolute;
-    right: 4px;
-    height: 26px;
-    padding: 0 10px;
-    background: #ffcc00;
-    border: 1px solid #000;
-    border-radius: 15px;
-    font-family: 'BurbankSmallMedium', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
+position: absolute;
+right: 5px;
+height: 28px;
+background: #ffcc00;
+border: 1.5px solid #000;
+border-radius: 15px;
+font-family: 'BurbankSmallMedium', sans-serif;
+font-weight: bold;
+cursor: pointer;
+padding: 0 12px;
 }
-
-.home-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 45px;
-    transition: transform 0.2s;
+.user-info {
+display: flex;
+align-items: center;
+gap: 10px;
+color: white;
+font-family: 'BurbankSmallMedium', sans-serif;
+font-size: 1.3rem;
 }
-
-.home-btn:hover {
-    transform: scale(1.1);
+.coin-icon {
+width: 30px;
+height: auto;
 }
-
-.home-btn img {
-    width: 100%;
-}
-
 .dd-button {
-    background: #ffcc00;
-    border: 2px solid #000;
-    border-radius: 12px;
-    padding: 6px 15px;
-    font-family: 'BurbankSmallMedium', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
+background: #ffcc00;
+border: 2px solid #000;
+border-radius: 12px;
+padding: 8px 18px;
+font-family: 'BurbankSmallMedium', sans-serif;
+font-weight: bold;
+cursor: pointer;
+text-transform: uppercase;
 }
+.home-btn {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 50px;
+z-index: 110;
+transition: transform 0.2s;
+}
+.home-btn:hover { transform: scale(1.1); }
+.home-btn img { width: 100%; }
