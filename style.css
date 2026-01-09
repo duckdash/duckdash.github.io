@@ -179,5 +179,32 @@ footer p {
     gap: 10px;
 }
 
+.chat-bar input {
+    font-family: Arial, sans-serif; 
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid #555;
+    width: 300px;
+}
+
+.exit-button {
+    font-family: 'BurbankSmallMedium', sans-serif;
+    background-color: #e62117;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.player-name {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+}
 
 
