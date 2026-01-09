@@ -9,7 +9,6 @@ body {
         linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
         linear-gradient(180deg, #0a61a8, #025599, #0a61a8);
     background-attachment: fixed;
-    cursor: url(duck.cur), auto;
     color: white; 
     margin: 0;
     padding: 0;
@@ -135,6 +134,4 @@ footer p {
     opacity: 0.8;
 }
 
-html, body { cursor: url('duck.cur'), auto !important; }
-a, button, .play-button { cursor: url('duck1.cur'), pointer !important; }
 
