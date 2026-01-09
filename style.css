@@ -121,8 +121,6 @@ img.hero-gif {
     display: inline-block;
     font-family: 'BurbankSmallMedium', sans-serif;
     font-size: 1.1rem;
-    padding-left: 100%;
-    animation: ticker 20s linear infinite;
 }
 
 @keyframes ticker {
@@ -139,3 +137,4 @@ footer p {
 
 html, body { cursor: url('duck.cur'), auto !important; }
 a, button, .play-button { cursor: url('duck1.cur'), pointer !important; }
+
