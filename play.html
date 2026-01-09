@@ -10,28 +10,27 @@
 </head>
 <body class="game-body">
 <div class="game-wrapper">
-<div id="game-world">
-    <a href="index.html" class="home-btn">
-        <img src="icon-home.png" alt="Home">
-    </a>
+    <div id="game-world">
+        <a href="#" class="home-btn">
+            <img src="icon-home.png" alt="Home">
+        </a>
 
-    <div id="player-duck">
-        <img src="1.gif" alt="Duck" id="duck-sprite">
+        <div id="player-duck" style="left: 50%; top: 50%;">
+            <img src="1.gif" alt="Duck" id="duck-sprite">
+        </div>
     </div>
-</div>
 
-    <div class="cp-taskbar-container">
-        <div class="taskbar-item map-area">
-            <button class="map-button">MAP</button>
+    <div class="dd-taskbar-container">
+        <div class="taskbar-left">
+            <button class="dd-button">Map</button>
         </div>
 
-        <div class="chat-wrapper">
+        <div class="dd-chat-wrapper">
             <input type="text" id="chat-input">
-            <button id="chat-send-btn">
-                <img src="chat-icon.png" alt="Send"> </button>
+            <button id="chat-send-btn">OK</button>
         </div>
 
-        <div class="taskbar-item inventory-area">
+        <div class="taskbar-right">
             <div class="user-info">
                 <img src="ci1.png" alt="Coins" class="coin-icon">
                 <span id="coin-count">500</span>
