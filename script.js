@@ -21,3 +21,18 @@ async function loadNews() {
 
 loadNews();
 
+const world = document.getElementById('game-world');
+const duck = document.getElementById('player-duck');
+
+if (world && duck) {
+    world.addEventListener('click', (e) => {
+        const rect = world.getBoundingClientRect();
+        const x = e.clientX - rect.left - (duck.offsetWidth / 2);
+        const y = e.clientY - rect.top - (duck.offsetHeight / 2);
+
+        duck.style.left = `${x}px`;
+        duck.style.top = `${y}px`;
+        
+        console.log(`Waddling to: ${x}, ${y}`);
+    });
+}
