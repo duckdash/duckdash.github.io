@@ -160,9 +160,9 @@ footer p {
 
 #player-duck {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
-    transition: all 0.1s linear;
+    transform: translate(-50%, -100%); 
+    z-index: 10;
+    pointer-events: none;
 }
 
 #duck-sprite {
@@ -282,5 +282,6 @@ footer p {
     font-family: 'BurbankSmallMedium', sans-serif;
     font-size: 20px;
 }
+
 
 
