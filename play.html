@@ -8,47 +8,33 @@
 </head>
 <body class="game-body">
 
-    <div class="game-container">
+    <div class="game-wrapper">
         <div id="game-world">
             <div id="player-duck">
-                <img src="1.gif" alt="My Duck" id="duck-sprite">
-            </div>
-        </div>
-        
-        <div class="game-ui">
-            <a href="index.html" class="exit-button">EXIT</a>
-            <div class="chat-bar">
-                <input type="text" placeholder="Waddle around and talk...">
-            </div>
-        </div>
-    </div>
-    <div class="game-wrapper">
-    <div id="game-world">
-        <div id="player-duck">
-            <img src="1.gif" alt="Duck">
-        </div>
-    </div>
-
-    <div class="cp-taskbar">
-        <div class="taskbar-left">
-            <div class="user-info">
-                <span class="coin-icon">🟡</span>
-                <span id="coin-count">500</span>
+                <img src="1.gif" alt="Duck" id="duck-sprite">
             </div>
         </div>
 
-        <div class="taskbar-center">
-            <input type="text" id="chat-input" placeholder="Say something...">
-        </div>
+        <div class="cp-taskbar">
+            <div class="taskbar-left">
+                <div class="user-info">
+                    <span class="coin-icon">🟡</span>
+                    <span id="coin-count">500</span>
+                </div>
+            </div>
 
-        <div class="taskbar-right">
-            <button class="cp-button">MAP</button>
-            <button class="cp-button">ITEMS</button>
-            <a href="index.html" class="cp-button exit">LOGOUT</a>
+            <div class="taskbar-center">
+                <input type="text" id="chat-input" placeholder="Say something...">
+            </div>
+
+            <div class="taskbar-right">
+                <button class="cp-button">MAP</button>
+                <button class="cp-button">ITEMS</button>
+                <a href="index.html" class="cp-button exit">LOGOUT</a>
+            </div>
         </div>
     </div>
-</div>
 
-    <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
