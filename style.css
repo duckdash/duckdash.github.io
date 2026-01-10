@@ -127,8 +127,8 @@ footer p {
 
 .play-area-wrapper {
     position: relative;
-    width: 960px;
-    height: 540px;
+    width: 854px;
+    height: 480px;
 }
 
 .home-btn {
@@ -221,7 +221,7 @@ footer p {
     height: 24px;
     background: #ffcc00;
     border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: 17px;
     font-family: 'BurbankSmallMedium', sans-serif;
     font-weight: bold;
     cursor: pointer;
@@ -253,4 +253,5 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
