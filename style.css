@@ -206,24 +206,29 @@ footer p {
     color: white;
     width: 380px;
     height: 32px;
-    border-radius: 17px;
+    border-radius: 100%;
     border: 1.5px solid #0247ad;
     padding: 0 65px 0 12px;
     font-family: Arial, sans-serif;
     outline: none;
     font-size: 14px;
 
-    background: linear-gradient(to bottom, #0059de, #0250c4);
+    background: linear-gradient(
+        to bottom, 
+        #0059de 0%, 
+        #0059de 50%, 
+        #0250c4 50%, 
+        #0250c4 100%
 }
 
 #chat-send-btn {
     position: absolute;
-    right: 5px;
+    right: 1px;
     height: 30px;
     width: 30px;
     background: #004bba;
     border: 1.5px solid #013c91;
-    border-radius: 17px;
+    border-radius: 100%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -261,6 +266,7 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
 
 
