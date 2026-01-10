@@ -36,48 +36,60 @@ const world = document.getElementById('game-world');
 const duck = document.getElementById('player-duck');
 
 const speed = 4;
-let moveInterval = null;
+
+let posX = 0;
+let posY = 0;
+let targetX = 0;
+let targetY = 0;
+let moving = false;
 
 if (world && duck) {
+    world.style.position = 'relative';
     duck.style.position = 'absolute';
 
+    // initialize position once
+    const worldRect = world.getBoundingClientRect();
+    const duckRect = duck.getBoundingClientRect();
+
+    posX = duckRect.left - worldRect.left;
+    posY = duckRect.top - worldRect.top;
+
+    duck.style.left = `${posX}px`;
+    duck.style.top = `${posY}px`;
+
     world.addEventListener('mousedown', (e) => {
-        clearInterval(moveInterval);
+        const rect = world.getBoundingClientRect();
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+        moving = true;
+    });
 
-        const worldRect = world.getBoundingClientRect();
-        const targetX = e.clientX - worldRect.left;
-        const targetY = e.clientY - worldRect.top;
+    function move() {
+        if (!moving) return;
 
-        function move() {
-            const duckRect = duck.getBoundingClientRect();
+        const dx = targetX - posX;
+        const dy = targetY - posY;
+        const distance = Math.hypot(dx, dy);
 
-            const currentX = duckRect.left - worldRect.left;
-            const currentY = duckRect.top - worldRect.top;
-
-            const dx = targetX - currentX;
-            const dy = targetY - currentY;
-            const distance = Math.hypot(dx, dy);
-
-            if (distance <= speed) {
-                duck.style.left = `${targetX}px`;
-                duck.style.top = `${targetY}px`;
-                clearInterval(moveInterval);
-                moveInterval = null;
-                return;
-            }
-
-            const velX = (dx / distance) * speed;
-            const velY = (dy / distance) * speed;
-
-            duck.style.left = `${currentX + velX}px`;
-            duck.style.top = `${currentY + velY}px`;
-
-            duck.style.transform =
-                velX < 0
-                    ? 'translate(-50%, -100%) scaleX(-1)'
-                    : 'translate(-50%, -100%) scaleX(1)';
+        if (distance <= speed) {
+            posX = targetX;
+            posY = targetY;
+            moving = false;
+        } else {
+            posX += (dx / distance) * speed;
+            posY += (dy / distance) * speed;
         }
 
-        moveInterval = setInterval(move, 20);
-    });
+        duck.style.left = `${posX}px`;
+        duck.style.top = `${posY}px`;
+
+        duck.style.transform =
+            dx < 0
+                ? 'translate(-50%, -100%) scaleX(-1)'
+                : 'translate(-50%, -100%) scaleX(1)';
+
+        requestAnimationFrame(move);
+    }
+
+    requestAnimationFrame(move);
 }
