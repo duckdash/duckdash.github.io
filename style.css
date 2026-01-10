@@ -109,7 +109,7 @@ footer {
 }
 
 footer p {
-    font-family: "BurbankSmallMedium", "Comic Sans MS", cursive, sans-serif;
+    font-family: "BurbankSmallMedium", "Comic Sans MS", sans-serif;
     font-size: 0.9rem;
     color: white;
     opacity: 0.7;
@@ -117,47 +117,25 @@ footer p {
 
 
 .game-body {
-    background-color: #003366;
+    background-color: #003366; 
     margin: 0;
-    padding: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center;     
     min-height: 100vh;
 }
 
-.play-screen-container {
+.play-area-wrapper {
     position: relative;
     width: 960px;
     height: 540px;
-    margin: auto;
-}
-
-.game-wrapper {
-    position: relative; 
-    width: 100%;
-    height: 100%;
-    background: #add8e6;
-    border: 1px solid #000; 
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 1;   
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-#game-world {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #add8e6 0%, #4682b4 100%);
-    position: relative;
 }
 
 .home-btn {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 45px;
+    top: -15px; 
+    left: -15px;
+    width: 55px;
     z-index: 999;
     transition: transform 0.2s;
 }
@@ -169,6 +147,24 @@ footer p {
 .home-btn img { 
     width: 100%; 
     display: block; 
+}
+
+.game-wrapper {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    background: #add8e6;
+    border: 1px solid #000; 
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#game-world {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #add8e6 0%, #4682b4 100%);
+    position: relative;
 }
 
 #player-duck {
@@ -185,14 +181,14 @@ footer p {
 
 .dd-taskbar-container {
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 95%;
-    height: 50px;
+    width: 94%;
+    height: 52px;
     background: linear-gradient(to bottom, #0059dd, #003399);
     border: 2px solid #001a4d;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -207,27 +203,30 @@ footer p {
 }
 
 #chat-input {
-    width: 400px;
-    height: 30px;
-    border-radius: 5px;
+    background-color: #0059dd;
+    color: white;
+    width: 380px;
+    height: 32px;
+    border-radius: 17px;
     border: 1px solid #001a4d;
-    padding: 0 60px 0 10px;
+    padding: 0 65px 0 12px;
     font-family: Arial, sans-serif;
     outline: none;
+    font-size: 14px;
 }
 
 #chat-send-btn {
     position: absolute;
     right: 5px;
-    height: 22px;
+    height: 24px;
     background: #ffcc00;
     border: 1px solid #000;
     border-radius: 4px;
     font-family: 'BurbankSmallMedium', sans-serif;
-    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
-    padding: 0 10px;
+    padding: 0 12px;
+    font-size: 12px;
 }
 
 .user-info {
@@ -236,21 +235,22 @@ footer p {
     gap: 10px;
     color: white;
     font-family: 'BurbankSmallMedium', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .coin-icon {
-    width: 25px;
+    width: 28px;
     height: auto;
 }
 
 .dd-button {
     background: #ffcc00;
     border: 1px solid #000;
-    border-radius: 5px;
-    padding: 5px 15px;
+    border-radius: 6px;
+    padding: 6px 16px;
     font-family: 'BurbankSmallMedium', sans-serif;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
 }
+
