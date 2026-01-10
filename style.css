@@ -188,7 +188,7 @@ footer p {
     height: 52px;
     background: linear-gradient(to bottom, #0059dd, #003399);
     border: 2px solid #001a4d;
-    border-radius: 50%;
+    border-radius: 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -277,6 +277,7 @@ footer p {
 
 
 .map-btn {
+    position: fixed;
     background-color: transparent;
     border: none;
     bottom: 100px;
@@ -299,6 +300,7 @@ footer p {
 .map-btn:active {
     transform: scale(0.95);
 }
+
 
 
 
