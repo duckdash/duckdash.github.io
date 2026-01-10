@@ -292,9 +292,10 @@ footer p {
 }
 
 .map-btn:hover {
-    background-image: url('icon-MapHover.png');
+    background-image: url('icon-mapHover.png');
 }
 
 .map-btn:active {
     transform: scale(0.95);
 }
+
