@@ -203,25 +203,26 @@ footer p {
 }
 
 #chat-input {
-    background-color: #0059dd;
     color: white;
     width: 380px;
     height: 32px;
     border-radius: 17px;
-    border: 1px solid #001a4d;
+    border: 1.5px solid #0247ad;
     padding: 0 65px 0 12px;
     font-family: Arial, sans-serif;
     outline: none;
     font-size: 14px;
+
+    background: linear-gradient(to bottom, #0059de, #0250c4);
 }
 
 #chat-send-btn {
     position: absolute;
     right: 5px;
-    height: 24px;
-    width: 45px;
-    background: #ffcc00;
-    border: 1px solid #000;
+    height: 30px;
+    width: 30px;
+    background: #004bba;
+    border: 1.5px solid #013c91;
     border-radius: 17px;
     cursor: pointer;
     display: flex;
@@ -260,6 +261,7 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
 
 
