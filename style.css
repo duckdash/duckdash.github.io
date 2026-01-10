@@ -7,7 +7,7 @@ body {
 background-image:
 linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
 linear-gradient(180deg, #0a61a8, #025599, #0a61a8);
-background-attachment: fixed;
+background-attachment: absolute;
 color: white;
 margin: 0;
 padding: 0;
@@ -80,7 +80,7 @@ transition: transform 0.2s;
 }
 .play-button::after {
 content: "";
-position: fixed;
+position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
 background-image: linear-gradient(180deg, #539FD8, #1356A2, #2F88CC);
 z-index: -1;
@@ -132,7 +132,7 @@ footer p {
 }
 
 .home-btn {
-    position: fixed;
+    position: absolute;
     top: -30px; 
     left: 10px;
     width: 20px;
@@ -168,7 +168,7 @@ footer p {
 }
 
 #player-duck {
-    position: fixed;
+    position: absolute;
     transform: translate(-50%, -100%);
     z-index: 10;
     pointer-events: none;
@@ -180,7 +180,7 @@ footer p {
 }
 
 .dd-taskbar-container {
-    position: fixed;
+    position: absolute;
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
@@ -223,7 +223,7 @@ footer p {
 }
 
 #chat-send-btn {
-    position: fixed;
+    position: absolute;
     right: 3px;
     height: 30px;
     width: 30px;
@@ -277,7 +277,7 @@ footer p {
 
 
 .map-btn {
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     border: none;
     bottom: 25px;
@@ -300,6 +300,7 @@ footer p {
 .map-btn:active {
     transform: scale(0.95);
 }
+
 
 
 
