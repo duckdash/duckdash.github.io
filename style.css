@@ -102,106 +102,155 @@ display: inline-block;
 font-family: 'BurbankSmallMedium', sans-serif;
 font-size: 1.1rem;
 }
-footer { padding: 20px; }
-footer p { font-family: "BurbankSmallMedium", sans-serif; font-size: 0.9rem; opacity: 0.8; }
+footer { 
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    font-family: "BurbankSmallMedium", "Comic Sans MS", cursive, sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.7;
+}
+
+
 .game-body {
-background-color: #003366;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
+    background-color: #003366;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+.play-screen-container {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    margin: auto;
+}
+
 .game-wrapper {
-position: relative;
-width: 800px;
-height: 600px;
-background: #add8e6;
-border: 1px solid #000;
-box-shadow: none;
-border-radius: 15px;
-overflow: hidden;
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    background: #add8e6;
+    border: 1px solid #000; 
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;   
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 #game-world {
-width: 100%;
-height: 100%;
-background: radial-gradient(circle, #add8e6 0%, #4682b4 100%);
-position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #add8e6 0%, #4682b4 100%);
+    position: relative;
 }
+
 .home-btn {
-position: absolute;
-top: 20px;
-left: 20px;
-width: 50px;
-z-index: 999;
-transition: transform 0.2s;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 45px;
+    z-index: 999;
+    transition: transform 0.2s;
 }
-.home-btn:hover { transform: scale(1.1); }
-.home-btn img { width: 100%; }
+
+.home-btn:hover { 
+    transform: scale(1.1); 
+}
+
+.home-btn img { 
+    width: 100%; 
+    display: block; 
+}
+
 #player-duck {
-position: absolute;
-transform: translate(-50%, -100%);
-z-index: 10;
-pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    z-index: 10;
+    pointer-events: none;
 }
-#duck-sprite { width: 80px; }
+
+#duck-sprite { 
+    width: 80px; 
+    height: auto;
+}
+
 .dd-taskbar-container {
-position: absolute;
-bottom: 15px;
-left: 50%;
-transform: translateX(-50%);
-width: 90%;
-height: 60px;
-background: linear-gradient(to bottom, #0059dd, #003399);
-border: 3px solid #001a4d;
-border-radius: 40px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 25px;
-z-index: 100;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 50px;
+    background: linear-gradient(to bottom, #0059dd, #003399);
+    border: 2px solid #001a4d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 100;
 }
+
 .dd-chat-wrapper {
-position: relative;
-display: flex;
-align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
+
 #chat-input {
-width: 350px;
-height: 35px;
-border-radius: 20px;
-border: 2px solid #001a4d;
-padding: 0 55px 0 15px;
-font-family: Arial, sans-serif;
-outline: none;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #001a4d;
+    padding: 0 60px 0 10px;
+    font-family: Arial, sans-serif;
+    outline: none;
 }
+
 #chat-send-btn {
-position: absolute;
-right: 5px;
-height: 28px;
-background: #ffcc00;
-border: 1.5px solid #000;
-border-radius: 15px;
-font-family: 'BurbankSmallMedium', sans-serif;
-font-weight: bold;
-cursor: pointer;
-padding: 0 12px;
+    position: absolute;
+    right: 5px;
+    height: 22px;
+    background: #ffcc00;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-family: 'BurbankSmallMedium', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 10px;
 }
+
 .user-info {
-display: flex;
-align-items: center;
-gap: 10px;
-color: white;
-font-family: 'BurbankSmallMedium', sans-serif;
-font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'BurbankSmallMedium', sans-serif;
+    font-size: 1.1rem;
 }
-.coin-icon { width: 30px; height: auto; }
+
+.coin-icon {
+    width: 25px;
+    height: auto;
+}
+
 .dd-button {
-background: #ffcc00;
-border: 2px solid #000;
-border-radius: 12px;
-padding: 8px 18px;
-font-family: 'BurbankSmallMedium', sans-serif;
-font-weight: bold;
-cursor: pointer;
-text-transform: uppercase;
+    background: #ffcc00;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-family: 'BurbankSmallMedium', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
 }
