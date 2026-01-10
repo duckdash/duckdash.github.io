@@ -224,10 +224,9 @@ footer p {
 
 #chat-send-btn {
     position: absolute;
-    right: 1px;
+    right: 2px;
     height: 30px;
     width: 30px;
-    background: #004bba;
     border: 1.5px solid #013c91;
     border-radius: 50%;
     cursor: pointer;
@@ -235,6 +234,14 @@ footer p {
     align-items: center;
     justify-content: center;
     padding: 0;
+
+    background: linear-gradient(
+        to bottom, 
+        #004ab8 0%, 
+        #004ab8 50%, 
+        #004bba 50%, 
+        #004bba 100%
+        );
 }
 
 #chat-send-btn img {
@@ -267,6 +274,7 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
 
 
