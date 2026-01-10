@@ -18,7 +18,6 @@ async function loadNews() {
                 ticker.innerText = data.headlines[index];
                 ticker.classList.remove('fade-out');
                 ticker.classList.add('fade-in');
-
                 index = (index + 1) % data.headlines.length;
             }, 500);
         };
@@ -47,7 +46,6 @@ if (world && duck) {
     world.style.position = 'relative';
     duck.style.position = 'absolute';
 
-    // initialize position once
     const worldRect = world.getBoundingClientRect();
     const duckRect = duck.getBoundingClientRect();
 
@@ -65,28 +63,28 @@ if (world && duck) {
     });
 
     function move() {
-        if (!moving) return;
+        if (moving) {
+            const dx = targetX - posX;
+            const dy = targetY - posY;
+            const distance = Math.hypot(dx, dy);
 
-        const dx = targetX - posX;
-        const dy = targetY - posY;
-        const distance = Math.hypot(dx, dy);
+            if (distance <= speed) {
+                posX = targetX;
+                posY = targetY;
+                moving = false;
+            } else {
+                posX += (dx / distance) * speed;
+                posY += (dy / distance) * speed;
+            }
 
-        if (distance <= speed) {
-            posX = targetX;
-            posY = targetY;
-            moving = false;
-        } else {
-            posX += (dx / distance) * speed;
-            posY += (dy / distance) * speed;
+            duck.style.left = `${posX}px`;
+            duck.style.top = `${posY}px`;
+
+            duck.style.transform =
+                dx < 0
+                    ? 'translate(-50%, -100%) scaleX(-1)'
+                    : 'translate(-50%, -100%) scaleX(1)';
         }
-
-        duck.style.left = `${posX}px`;
-        duck.style.top = `${posY}px`;
-
-        duck.style.transform =
-            dx < 0
-                ? 'translate(-50%, -100%) scaleX(-1)'
-                : 'translate(-50%, -100%) scaleX(1)';
 
         requestAnimationFrame(move);
     }
