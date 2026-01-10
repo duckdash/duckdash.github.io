@@ -8,32 +8,34 @@
     <link rel="icon" href="webIcon1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="game-body">
-<div class="play-screen-container">
-    <a href="index.html" class="home-btn">
-        <img src="icon-home.png" alt="Home">
-    </a>
-
-    <div class="game-wrapper">
-        <div id="game-world">
-            <div id="player-duck" style="left: 400px; top: 300px;">
-                <img src="1.gif" alt="Duck" id="duck-sprite">
-            </div>
-        </div>
+<div class="game-body">
+    <div class="play-screen-container">
         
-        <div class="dd-taskbar-container">
-            </div>
-    </div>
-</div>
-        <div class="dd-chat-wrapper">
-            <input type="text" id="chat-input">
-            <button id="chat-send-btn">OK</button>
-        </div>
+        <a href="index.html" class="home-btn">
+            <img src="icon-home.png" alt="Home">
+        </a>
 
-        <div class="taskbar-right">
-            <div class="user-info">
-                <img src="ci1.png" alt="Coins" class="coin-icon">
-                <span id="coin-count">500</span>
+        <div class="game-wrapper">
+            <div id="game-world">
+                <div id="player-duck" style="left: 480px; top: 270px;">
+                    <img src="1.gif" alt="Duck" id="duck-sprite">
+                </div>
+            </div>
+
+            <div class="dd-taskbar-container">
+                <div class="taskbar-left">
+                    <button class="dd-button">MAP</button>
+                </div>
+                <div class="dd-chat-wrapper">
+                    <input type="text" id="chat-input" placeholder="Say something...">
+                    <button id="chat-send-btn">OK</button>
+                </div>
+                <div class="taskbar-right">
+                    <div class="user-info">
+                        <img src="ci1.png" alt="Coins" class="coin-icon">
+                        <span id="coin-count">500</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
