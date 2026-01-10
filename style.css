@@ -219,6 +219,7 @@ footer p {
         #0059de 50%, 
         #0250c4 50%, 
         #0250c4 100%
+        );
 }
 
 #chat-send-btn {
@@ -266,6 +267,7 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
 
 
