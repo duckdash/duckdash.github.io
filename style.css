@@ -133,9 +133,9 @@ footer p {
 
 .home-btn {
     position: absolute;
-    top: -15px; 
-    left: -15px;
-    width: 55px;
+    top: -5px; 
+    left: -20px;
+    width: 20px;
     z-index: 999;
     transition: transform 0.2s;
 }
@@ -253,5 +253,6 @@ footer p {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 
 
