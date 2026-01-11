@@ -33,28 +33,18 @@ loadNews();
 
 const world = document.getElementById('game-world');
 const duck = document.getElementById('player-duck');
+const uiElements = document.querySelectorAll('.dd-taskbar-container, .map-btn');
 
+let posX = 427, posY = 240;
+let targetX = 427, targetY = 240;
+let moving = false;
 const speed = 4;
 
-let posX = 0;
-let posY = 0;
-let targetX = 0;
-let targetY = 0;
-let moving = false;
+uiElements.forEach(el => {
+    el.addEventListener('mousedown', (e) => e.stopPropagation());
+});
 
 if (world && duck) {
-    world.style.position = 'relative';
-    duck.style.position = 'absolute';
-
-    const worldRect = world.getBoundingClientRect();
-    const duckRect = duck.getBoundingClientRect();
-
-    posX = duckRect.left - worldRect.left;
-    posY = duckRect.top - worldRect.top;
-
-    duck.style.left = `${posX}px`;
-    duck.style.top = `${posY}px`;
-
     world.addEventListener('mousedown', (e) => {
         const rect = world.getBoundingClientRect();
         targetX = e.clientX - rect.left;
@@ -80,14 +70,11 @@ if (world && duck) {
             duck.style.left = `${posX}px`;
             duck.style.top = `${posY}px`;
 
-            duck.style.transform =
-                dx < 0
-                    ? 'translate(-50%, -100%) scaleX(-1)'
-                    : 'translate(-50%, -100%) scaleX(1)';
+            duck.style.transform = dx < 0 
+                ? 'translate(-50%, -100%) scaleX(-1)' 
+                : 'translate(-50%, -100%) scaleX(1)';
         }
-
         requestAnimationFrame(move);
     }
-
-    requestAnimationFrame(move);
+    move();
 }
