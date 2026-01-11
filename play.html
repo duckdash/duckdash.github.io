@@ -4,34 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play | Duck Dash</title>
-    <meta name="description" content="Play Duck Dash nowOWOWOWOWOW!!!">
-    <link rel="icon" href="webIcon1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<div class="game-body">
-<div class="play-area-wrapper">
-    <button class="map-btn"></button>
+<body class="game-body">
 
-    <div class="dd-taskbar-container">
-        <div class="taskbar-left-btns">
-            <button class="circle-icon-btn"><img src="icon1.png"></button>
-            <button class="circle-icon-btn"><img src="icon2.png"></button>
-        </div>
+    <div class="play-area-wrapper">
+        
+        <a href="index.html" class="home-btn">
+            <img src="icon-home.png" alt="Home">
+        </a>
 
-        <div class="dd-chat-wrapper">
-            <input type="text" id="chat-input">
-            <button id="chat-send-btn"><img src="icon-sendChat.png"></button>
-        </div>
+        <button class="map-btn"></button>
 
-        <div class="taskbar-right-btns">
-             <button class="circle-icon-btn"><img src="icon3.png"></button>
-        </div>
-    </div>
-</div>
-        </div>
-    </div>
-</div>
-    
-    <script src="script.js"></script>
+        <div class="game-wrapper">
+            <div id="game-world">
+                <div id="player-duck" style="left: 427px; top: 240px;">
+                    <img src="1.gif" alt="Duck" id="duck-sprite">
+                </div>
+            </div>
+
+            <div class="dd-taskbar-container">
+                
+                <div class="taskbar-group">
+                    <button class="circle-icon-btn"><img src="icon-puffle.png"></button>
+                    <button class="circle-icon-btn"><img src="icon-action.png"></button>
+                </div>
+
+                <div class="dd-chat-wrapper">
+                    <input type="text" id="chat-input" placeholder="Say something...">
+                    <button id="chat-send-btn">
+                        <img src="icon-sendChat.png" alt="Send">
+                    </button>
+                </div>
+
+                <div class="taskbar-group">
+                    <div class="user-info">
+                        <img src="ci1.png" alt="C" class="coin-icon">
+                        <span id="coin-count">500</span>
+                    </div>
+                    <button class="circle-icon-btn"><img src="icon-settings.png"></button>
+                </div>
+
+            </div> </div> </div> </body>
+</html>"script.js"></script>
 </body>
 </html>
