@@ -1,0 +1,99 @@
+@font-face { font-family: 'BurbankBigBlack'; src: url('BurbankBigBlack.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'Bumbastika'; src: url('BumbastikaImproved.otf') format('opentype'); font-weight: 900; }
+@font-face { font-family: 'CComicrazyItalic'; src: url('CComicrazyItalic.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'BurbankSmallMedium'; src: url('BurbankSmallMedium.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'BurbankBigBold'; src: url('BurbankBigBold.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'BurbankSmallLight'; src: url('BurbankSmallLight.ttf') format('truetype'); font-weight: 900; }
+.game-body {
+    background-color: #111;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.play-area-wrapper {
+    position: relative;
+    width: 854px;
+    height: 480px;
+    background: #000;
+}
+
+.map-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 65px;
+    height: 65px;
+    background: url('icon-map.png') no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+}
+
+.dd-taskbar-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 55px;
+    background: linear-gradient(to bottom, #0066cc 0%, #0044aa 100%);
+    border: 2px solid #002266;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 100;
+}
+
+.taskbar-group { display: flex; align-items: center; gap: 5px; }
+
+.circle-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #0088ff, #0044aa);
+    border: 1px solid #002266;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-icon-btn img { width: 70%; }
+
+.dd-chat-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#chat-input {
+    width: 300px;
+    height: 28px;
+    border-radius: 14px;
+    border: 2px solid #002266;
+    background: #fff;
+    padding: 0 40px 0 12px;
+    font-family: Arial, sans-serif;
+}
+
+#chat-send-btn {
+    position: absolute;
+    right: 5px;
+    background: #ffcc00;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#game-world { width: 100%; height: 100%; position: relative; }
+#player-duck { position: absolute; pointer-events: none; transition: transform 0.1s; }
+#duck-sprite { width: 80px; }
