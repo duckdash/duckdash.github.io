@@ -181,7 +181,7 @@ footer p {
 
 .dd-taskbar-container {
     position: absolute;
-    bottom: -25px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -300,6 +300,7 @@ footer p {
 .map-btn:active {
     transform: scale(0.95);
 }
+
 
 
 
