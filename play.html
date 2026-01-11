@@ -9,36 +9,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <div class="game-body">
-    <div class="play-area-wrapper">
-        
-        <a href="https://duckdash.github.io/" class="home-btn">
-            <img src="icon-home.png" alt="Home">
-        </a>
+<div class="play-area-wrapper">
+    <button class="map-btn"></button>
 
-        <div class="game-wrapper">
-            <div id="game-world">
-                <div id="player-duck" style="left: 480px; top: 270px;">
-                    <img src="1.gif" alt="Duck" id="duck-sprite">
-                </div>
-            </div>
+    <div class="dd-taskbar-container">
+        <div class="taskbar-left-btns">
+            <button class="circle-icon-btn"><img src="icon1.png"></button>
+            <button class="circle-icon-btn"><img src="icon2.png"></button>
+        </div>
 
-            <div class="dd-taskbar-container">
-                <div class="taskbar-left">
-                    <button class="dd-button map-btn"></button>
-                </div>
-                <div class="dd-chat-wrapper">
-                    <input type="text" id="chat-input">
-                    <button id="chat-send-btn">
-                       <img src="icon-sendChat.png" alt="s">
-                    </button>
-                </div>
-                <div class="taskbar-right">
-                    <div class="user-info">
-                        <img src="ci1.png" alt="Coins" class="coin-icon">
-                        <span id="coin-count">500</span>
-                    </div>
-                </div>
-            </div>
+        <div class="dd-chat-wrapper">
+            <input type="text" id="chat-input">
+            <button id="chat-send-btn"><img src="icon-sendChat.png"></button>
+        </div>
+
+        <div class="taskbar-right-btns">
+             <button class="circle-icon-btn"><img src="icon3.png"></button>
+        </div>
+    </div>
+</div>
         </div>
     </div>
 </div>
