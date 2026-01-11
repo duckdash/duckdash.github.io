@@ -178,17 +178,29 @@ footer p {
     width: 80px; 
     height: auto;
 }
+.map-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 65px;
+    height: 65px;
+    background: url('icon-map.png') no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.2));
+}
 
 .dd-taskbar-container {
     position: absolute;
-    bottom: -10px;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 52px;
-    background: linear-gradient(to bottom, #0059dd, #003399);
-    border: 2px solid #001a4d;
-    border-radius: 26px;
+    width: 85%;
+    height: 50px;
+    background: linear-gradient(to bottom, #0066cc, #0044aa);
+    border: 2px solid #003388;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,110 +208,36 @@ footer p {
     z-index: 100;
 }
 
-.dd-chat-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-#chat-input {
-    color: white;
-    width: 380px;
-    height: 32px;
-    border-radius: 20px;
-    border: 1.5px solid #0247ad;
-    padding: 0 65px 0 12px;
-    font-family: Arial, sans-serif;
-    outline: none;
-    font-size: 14px;
-
-    background: linear-gradient(
-        to bottom, 
-        #0059de 0%, 
-        #0059de 50%, 
-        #0250c4 50%, 
-        #0250c4 100%
-        );
-}
-
-#chat-send-btn {
-    position: absolute;
-    right: 3px;
-    height: 30px;
-    width: 30px;
-    border: 1.5px solid #013c91;
+.circle-icon-btn {
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
+    background: linear-gradient(to bottom, #0088ff, #0055cc);
+    border: 1.5px solid #003388;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin: 0 3px;
     padding: 0;
-
-    background: linear-gradient(
-        to bottom, 
-        #003a98 0%, 
-        #003a98 50%, 
-        #004bba 50%, 
-        #004bba 100%
-        );
 }
 
-#chat-send-btn img {
-    height: 18px; 
-    width: auto;
-    display: block;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    font-family: 'BurbankSmallMedium', sans-serif;
-    font-size: 1.2rem;
-}
-
-.coin-icon {
-    width: 28px;
+.circle-icon-btn img {
+    width: 70%;
     height: auto;
 }
 
-.dd-button {
-    background: #ffcc00;
-    border: 1px solid #000;
-    border-radius: 6px;
-    padding: 6px 16px;
-    font-family: 'BurbankSmallMedium', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
+#chat-input {
+    width: 300px;
+    height: 28px;
+    background: #003388;
+    border: 1.5px solid #002266;
+    border-radius: 5px;
+    color: white;
+    padding: 0 10px;
+    outline: none;
 }
 
-
-.map-btn {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    bottom: 25px;
-    padding: 0;
-    width: 75px;
-    height: 75px; 
-    cursor: pointer;
-    
-    background-image: url('icon-map.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: transform 0.1s ease;
-}
-
-.map-btn:hover {
-    background-image: url('icon-mapHover.png');
-}
-
-.map-btn:active {
-    transform: scale(0.95);
-}
 
 
 
